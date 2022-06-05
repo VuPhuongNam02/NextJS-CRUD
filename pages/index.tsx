@@ -1,14 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import dynamic from "next/dynamic";
+
+const HomePage = dynamic(() => import("@/containers/Home"));
 
 const Home: NextPage = () => {
-  return (
-    <h1 className="text-3xl font-bold underline text-blue-600/100">
-      Hello world!
-    </h1>
-  );
+  return <HomePage />;
 };
 
 export default Home;
